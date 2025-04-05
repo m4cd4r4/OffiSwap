@@ -1,4 +1,4 @@
-const { Pool } = require('pg');
+        const { Pool } = require('pg');
 require('dotenv').config({ path: '../.env' }); // Ensure .env is loaded relative to this file's location
 
 // Create a new connection pool using environment variables

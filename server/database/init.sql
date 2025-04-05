@@ -1,4 +1,4 @@
--- Drop tables if they exist to ensure a clean slate (optional, use with caution in development)
+ indexes-- Drop tables if they exist to ensure a clean slate (optional, use with caution in development)
 DROP TABLE IF EXISTS Claims;
 DROP TABLE IF EXISTS ListingImages;
 DROP TABLE IF EXISTS Listings;
