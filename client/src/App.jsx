@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'; // Import Fragment
 import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom'; // Import useNavigate
 import { useAuth } from './context/AuthContext'; // Import useAuth
+import './index.css'; // Import Tailwind CSS directives here
 
 // Import Page Components
 import HomePage from './pages/HomePage';
@@ -43,13 +44,15 @@ const Navbar = () => {
   const guestLinks = (
     <Fragment>
       <Link to="/login" className={linkStyle}>Login</Link>
-      <Link to="/register" className={linkStyle.replace('mr-4', '')}>Register</Link> {/* Remove margin for last item */}
+      {/* Use static string for Register link */}
+      <Link to="/register" className="text-blue-600 hover:text-blue-800 hover:underline">Register</Link>
     </Fragment>
   );
 
   return (
     <nav className="mb-5 border-b border-gray-200 pb-3 flex items-center">
-      <Link to="/" className={`${linkStyle} font-bold`}>Home</Link>
+      {/* Use static string for Home link */}
+      <Link to="/" className="mr-4 text-blue-600 hover:text-blue-800 hover:underline font-bold">Home</Link>
       <Link to="/listings" className={linkStyle}>Listings</Link>
       <div className="ml-auto"> {/* Push auth links to the right */}
         {!isLoading && (isAuthenticated ? authLinks : guestLinks)} {/* Show links based on auth state */}

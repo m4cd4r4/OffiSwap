@@ -1,6 +1,6 @@
 import React from 'react' // Import React
 import { createRoot } from 'react-dom/client'
-import './index.css' // Import Tailwind CSS directives
+// CSS import removed, will be imported in App.jsx
 import App from './App.jsx'
 import { AuthProvider } from './context/AuthContext.jsx' // Import AuthProvider
 
